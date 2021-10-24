@@ -21,7 +21,6 @@ function SearchPage() {
         noOfVideos={382}
         description='The starter Pokemon rebel against humanity and decide to evolve themselves.'
       />
-
       <hr />
 
       <VideoRow
