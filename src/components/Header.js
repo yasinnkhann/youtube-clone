@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import VideoCallIcon from '@material-ui/icons/VideoCall';
@@ -10,18 +10,35 @@ import '../styles/Header.css';
 
 function Header() {
   const [inputSearch, setInputSearch] = useState('');
+  const history = useHistory();
+
+  const handleSearch = () => {
+    history.push(`/search/${inputSearch}`);
+    setInputSearch('');
+  };
+
+  const handleReturnToHome = () => {
+    history.push('/');
+    setInputSearch('');
+  };
 
   return (
     <div className='header'>
       <div className='header__left'>
         <MenuIcon />
-        <Link to='/'>
+        <img
+          className='header__logo'
+          src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/1024px-Logo_of_YouTube_%282015-2017%29.svg.png'
+          alt=''
+          onClick={() => handleReturnToHome()}
+        />
+        {/* <Link to='/'>
           <img
             className='header__logo'
             src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/1024px-Logo_of_YouTube_%282015-2017%29.svg.png'
             alt=''
           />
-        </Link>
+        </Link> */}
       </div>
 
       <div className='header__input'>
@@ -31,9 +48,13 @@ function Header() {
           placeholder='Search'
           type='text'
         />
-        <Link to={`/search/${inputSearch}`}>
+        <SearchIcon
+          className='header__inputButton'
+          onClick={() => handleSearch()}
+        />
+        {/* <Link to={`/search/${inputSearch}`}>
           <SearchIcon className='header__inputButton' />
-        </Link>
+        </Link> */}
       </div>
 
       <div className='header__icons'>
