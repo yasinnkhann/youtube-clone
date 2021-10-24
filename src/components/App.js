@@ -1,10 +1,10 @@
 import React from 'react';
-import './App.css';
-import Header from './Header';
-import Sidebar from './Sidebar';
-import SearchPage from './SearchPage';
-import RecommendedVideos from './RecommendedVideos';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Header from './Header.js';
+import Sidebar from './Sidebar.js';
+import SearchPage from './SearchPage.js';
+import RecommendedVideos from './RecommendedVideos.js';
+import '../styles/App.css';
 
 function App() {
   return (

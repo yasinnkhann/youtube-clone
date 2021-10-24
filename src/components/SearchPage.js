@@ -1,8 +1,8 @@
 import React from 'react';
-import ChannelRow from './ChannelRow';
-import VideoRow from './VideoRow';
 import TuneOutlinedIcon from '@material-ui/icons/TuneOutlined';
-import './SearchPage.css';
+import ChannelRow from './ChannelRow.js';
+import VideoRow from './VideoRow.js';
+import '../styles/SearchPage.css';
 
 function SearchPage() {
   return (

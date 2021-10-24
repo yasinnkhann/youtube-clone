@@ -1,7 +1,7 @@
 import React from 'react';
-import './ChannelRow.css';
 import { Avatar } from '@material-ui/core';
 import VerifiedIcon from '@material-ui/icons/CheckCircleOutlineOutlined';
+import '../styles/ChannelRow.css';
 
 function ChannelRow({
   image,

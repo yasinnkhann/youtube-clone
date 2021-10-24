@@ -1,6 +1,6 @@
 import React from 'react';
-import './VideoCard.css';
 import Avatar from '@material-ui/core/Avatar';
+import '../styles/VideoCard.css';
 
 function VideoCard({ image, title, channel, views, timestamp, channelImage }) {
   return (
